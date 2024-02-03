@@ -26,7 +26,7 @@ export default function Navbar(props) {
             </li>
           </ul>
           {/* custom theme */}
-          {/* <div className="d-flex">
+          <div className="d-flex">
             <div
               className="bg-primary rounded-circle mx-2"
               style={{ height: "25px", width: "25px", cursor: "pointer" }}
@@ -61,7 +61,7 @@ export default function Navbar(props) {
                 props.toggleMode("warning");
               }}
             ></div>
-          </div> */}
+          </div>
           {/* drak-mode button */}
           <div className={`form-check form-switch mx-3 text-${props.mode === "light" ? "dark" : "light"}`}>
             <input

@@ -9,7 +9,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
-
+  const [cls, setCls] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
       msg: message,
@@ -21,9 +21,10 @@ function App() {
     }, 2000);
   };
   const toggleMode = (cls) => {
-    // removeBodyClasses();
+    removeBodyClasses();
     // console.log(cls);
-    // document.body.classList.add("bg-" + cls);
+    document.body.classList.add("bg-" + cls);
+    setCls(cls);
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#3A3B3C";
@@ -37,14 +38,14 @@ function App() {
     }
   };
 
-  // const removeBodyClasses = () => {
-  //   document.body.classList.remove("bg-light");
-  //   document.body.classList.remove("bg-dark");
-  //   document.body.classList.remove("bg-primary");
-  //   document.body.classList.remove("bg-success");
-  //   document.body.classList.remove("bg-warning");
-  //   document.body.classList.remove("bg-danger");
-  // };
+  const removeBodyClasses = () => {
+    document.body.classList.remove("bg-light");
+    document.body.classList.remove("bg-dark");
+    document.body.classList.remove("bg-primary");
+    document.body.classList.remove("bg-success");
+    document.body.classList.remove("bg-warning");
+    document.body.classList.remove("bg-danger");
+  };
   return (
     <>
       {/* with cutomized props */}
@@ -53,7 +54,7 @@ function App() {
       {/* <Navbar /> */}
       <Alert alert={alert} />
       <Routes>
-        <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />} />
+        <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} cls={cls} />} />
         <Route exact index element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />} />
         <Route exact path="/about" element={<About showAlert={showAlert} />} />
       </Routes>

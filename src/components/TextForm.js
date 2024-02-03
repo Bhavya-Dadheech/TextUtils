@@ -35,7 +35,7 @@ export default function TextForm(props) {
 
   return (
     <div
-      className="container"
+      className={`container bg-${props.cls}`}
       style={{
         color: props.mode === "light" ? "#3A3B3C" : "white",
         backgroundColor: props.mode === "light" ? "white" : "#3A3B3C"
@@ -79,11 +79,7 @@ export default function TextForm(props) {
         </p>
         <p>{text.split(/\s+/).filter((word) => word !== "").length * 0.008} minutes read</p>
         <h2>Preview</h2>
-        <p>
-          {text.split(/\s+/).filter((word) => word !== "").length > 0
-            ? text
-            : "Enter something to in the text-box to preview it here."}
-        </p>
+        <p>{text.split(/\s+/).filter((word) => word !== "").length > 0 ? text : "Enter something to in the text-box to preview it here."}</p>
       </div>
     </div>
   );
