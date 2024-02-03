@@ -19,6 +19,7 @@ export default function TextForm(props) {
     var text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
   };
 
   const handleSpace = () => {
@@ -35,7 +36,7 @@ export default function TextForm(props) {
 
   return (
     <div
-      className={`container bg-${props.cls}`}
+      className={`container bg-${props.cls} py-3`}
       style={{
         color: props.mode === "light" ? "#3A3B3C" : "white",
         backgroundColor: props.mode === "light" ? "white" : "#3A3B3C"
@@ -56,30 +57,30 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-1" onClick={handleUpClick}>
+        <button disabled={text.length === 0} className="btn btn-primary my-1 mx-1" onClick={handleUpClick}>
           Conver to UPPERCASE
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleLowClick}>
+        <button disabled={text.length === 0} className="btn btn-primary my-1 mx-1" onClick={handleLowClick}>
           Conver to lowecase
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleCopyText}>
+        <button disabled={text.length === 0} className="btn btn-primary my-1 mx-1" onClick={handleCopyText}>
           Copy text
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleSpace}>
+        <button disabled={text.length === 0} className="btn btn-primary my-1 mx-1" onClick={handleSpace}>
           Remove extra space
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleClear}>
+        <button disabled={text.length === 0} className="btn btn-primary my-1 mx-1" onClick={handleClear}>
           Clear text
         </button>
       </div>
       <div className="container my-3">
         <h2>Your text summary</h2>
         <p>
-          {text.split(/\s+/).filter((word) => word !== "").length} words and {text.length} chrachters
+          {text.split(" ").filter((word) => word !== "").length} words and {text.length} chrachters
         </p>
-        <p>{text.split(/\s+/).filter((word) => word !== "").length * 0.008} minutes read</p>
+        <p>{text.split(" ").filter((word) => word !== "").length * 0.008} minutes read</p>
         <h2>Preview</h2>
-        <p>{text.split(/\s+/).filter((word) => word !== "").length > 0 ? text : "Enter something to in the text-box to preview it here."}</p>
+        <p>{text.split(" ").filter((word) => word !== "").length > 0 ? text : "Enter something to in the text-box to preview it here."}</p>
       </div>
     </div>
   );
