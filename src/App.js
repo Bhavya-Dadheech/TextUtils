@@ -22,7 +22,6 @@ function App() {
   };
   const toggleMode = (cls) => {
     removeBodyClasses();
-    // console.log(cls);
     document.body.classList.add("bg-" + cls);
     setCls(cls);
     if (mode === "light") {
@@ -52,8 +51,21 @@ function App() {
       {/* <Navbar /> */}
       <Alert alert={alert} />
       <Routes>
-        <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} cls={cls} />} />
-        <Route exact index element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />} />
+      <Route
+          exact
+          path="/"
+          element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} cls={cls} />}
+        />
+        <Route
+          exact
+          path="/home"
+          element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} cls={cls} />}
+        />
+        <Route
+          exact
+          index
+          element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />}
+        />
         <Route exact path="/about" element={<About showAlert={showAlert} mode={mode} />} />
       </Routes>
     </>

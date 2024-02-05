@@ -16,10 +16,16 @@ export default function TextForm(props) {
   };
 
   const handleCopyText = () => {
-    var text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+    // var text = document.getElementById("myBox");
+    // text.select();
+    // navigator.clipboard.writeText(text.value);
+    // document.getSelection().removeAllRanges();
+
+    // if we are using the navigator api , then we dont have to use the commented code above.
+    // we can simply write like this.
+    navigator.clipboard.writeText(text);
+
+    // document.getSelection().removeAllRanges();
   };
 
   const handleSpace = () => {
@@ -76,11 +82,15 @@ export default function TextForm(props) {
       <div className="container my-3">
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").filter((word) => word !== "").length} words and {text.length} chrachters
+          {text.split(/\s+/).filter((word) => word !== "").length} words and {text.length} chrachters
         </p>
         <p>{text.split(" ").filter((word) => word !== "").length * 0.008} minutes read</p>
         <h2>Preview</h2>
-        <p>{text.split(" ").filter((word) => word !== "").length > 0 ? text : "Enter something to in the text-box to preview it here."}</p>
+        <p>
+          {text.split(" ").filter((word) => word !== "").length > 0
+            ? text
+            : "Enter something to in the text-box to preview it here."}
+        </p>
       </div>
     </div>
   );
