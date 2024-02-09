@@ -44,43 +44,6 @@ export default function Navbar(props) {
               </Link>
             </li>
           </ul>
-          {/* custom theme */}
-          <div className="d-flex">
-            <div
-              className="bg-primary rounded-circle mx-2"
-              style={{ height: "25px", width: "25px", cursor: "pointer" }}
-              onClick={() => {
-                props.toggleMode("primary");
-              }}
-            ></div>
-          </div>
-          <div className="d-flex">
-            <div
-              className="bg-danger rounded-circle mx-2"
-              style={{ height: "25px", width: "25px", cursor: "pointer" }}
-              onClick={() => {
-                props.toggleMode("danger");
-              }}
-            ></div>
-          </div>
-          <div className="d-flex">
-            <div
-              className="bg-success rounded-circle mx-2"
-              style={{ height: "25px", width: "25px", cursor: "pointer" }}
-              onClick={() => {
-                props.toggleMode("success");
-              }}
-            ></div>
-          </div>
-          <div className="d-flex">
-            <div
-              className="bg-warning rounded-circle mx-2"
-              style={{ height: "25px", width: "25px", cursor: "pointer" }}
-              onClick={() => {
-                props.toggleMode("warning");
-              }}
-            ></div>
-          </div>
           {/* drak-mode button */}
           <div className={`form-check form-switch mx-3 text-${props.mode === "light" ? "dark" : "light"}`}>
             <input
