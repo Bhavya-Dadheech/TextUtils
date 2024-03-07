@@ -1,3 +1,19 @@
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+# React Version
+18.2.0
+
 # TextUtis
 TextUtils offers a swift and efficient solution for text analysis, catering to various needs, whether it's counting words, characters, or evaluating entire paragraphs. This free character counter tool provides instant character count and word count statistics for any given text, making it an invaluable resource for writers, students, and professionals.
 
