@@ -20,5 +20,5 @@ To run the web application locally, you need to install Node.js on your device. 
 
 # Tech Stack Used
 
-![download](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/88000a19-383b-4fc8-9fd3-538b0711fcab)
+![javascript](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/d32aff49-1f80-4013-8216-33dece380552)
 
