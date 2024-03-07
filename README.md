@@ -4,14 +4,20 @@ TextUtils offers a swift and efficient solution for text analysis, catering to v
 # Installation
 To run the web application locally, you need to install Node.js on your device. Once installed, follow these steps:
 
-Clone the repository: git clone https://github.com/Harshdev625/Todolist
+   1.Clone the repository: git clone https://github.com/Harshdev625/Todolist
 
-Now you are ready to start running the application. Use the following commands:
+   2.Now you are ready to start running the application. Use the following commands:
 
-Install all the required dependencies using:
+   3.Install all the required dependencies using:
+    
+    npm install
+    
+   4.Start the development server using:
+      
+      npm start
 
-npm install
-Start the development server using:
+   5.To Do list is now running on localhost.
 
-npm start
-To Do list is now running on localhost.
+# Tech Stack Used
+
+![download](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/94cce875-fb67-480a-906a-6e3737dee320)
