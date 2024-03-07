@@ -25,3 +25,13 @@ To run the web application locally, you need to install Node.js on your device. 
 ![html](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/427b56e8-8be5-46c5-bbab-1e23e4d4cda0)
 ![react](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/43149fb8-6449-4403-940e-ce62b7c38d14)
 ![bootstrap](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/b0e3f3df-e857-498a-ad96-5625aff042f7)
+
+# Preview
+
+https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/f0e00b2c-40e5-4514-b55a-89418efb589b
+
+# Contribution
+
+Contributions to the TextUtils are welcome! If you encounter any bugs or issues or have ideas for improvements, please open an issue on the repository. Pull requests with enhancements are also appreciated.
+
+(If you liked the project, give it a star 😃)
