@@ -51,7 +51,7 @@ function App() {
       {/* <Navbar /> */}
       <Alert alert={alert} />
       <Routes>
-      <Route
+        <Route
           exact
           path="/"
           element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} cls={cls} />}
